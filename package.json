@@ -10,7 +10,7 @@
         "start": "node src/app.js",
         "dev": "nodemon src/app.js",
         "test": "jest",
-        "build": "if not exist dist mkdir dist && xcopy /E /I src dist",
+        "build": "mkdir -p dist && cp -r src/* dist/",
         "vercel-build": "npm run build",
         "deploy": "vercel deploy"
     },
