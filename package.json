@@ -1,0 +1,27 @@
+{
+    "name": "rate-limiting-demo",
+    "version": "1.0.0",
+    "description": "Example of Rate Limiting Pattern",
+    "main": "src/app.js",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "test": "jest",
+        "build": "if not exist dist mkdir dist && xcopy /E /I src dist",
+        "vercel-build": "npm run build",
+        "deploy": "vercel deploy"
+    },
+    "dependencies": {
+        "express": "^4.21.2",
+        "express-rate-limit": "^5.5.1"
+    },
+    "devDependencies": {
+        "jest": "^27.5.1",
+        "nodemon": "^2.0.22",
+        "supertest": "^6.3.4",
+        "vercel": "^32.4.1"
+    }
+}
